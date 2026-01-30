@@ -1,7 +1,7 @@
 'use client';
 import dynamic from 'next/dynamic';
 
-export const DivisionGroupsDemo = dynamic(() =>
+const DivisionGroupsDemo = dynamic(() =>
   import('./DivisionGroupsDemo'),
 );
 
