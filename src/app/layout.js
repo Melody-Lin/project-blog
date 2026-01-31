@@ -5,6 +5,7 @@ import { cookies } from 'next/headers';
 
 import {
   BLOG_TITLE,
+  BLOG_DESCRIPTION,
   COLOR_THEME_COOKIE,
   LIGHT_TOKENS,
   DARK_TOKENS,
@@ -29,7 +30,10 @@ const monoFont = Spline_Sans_Mono({
   variable: '--font-family-mono',
 });
 
-export const metadata = { title: BLOG_TITLE };
+export const metadata = {
+  title: BLOG_TITLE,
+  description: BLOG_DESCRIPTION,
+};
 
 async function RootLayout({ children }) {
   const savedTheme = (await cookies()).get(COLOR_THEME_COOKIE);
